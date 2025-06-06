@@ -14,6 +14,8 @@ spec:
       labels:
         app: workload-security-evaluator
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
       - image: confusedcrib/workload-security-evaluator:latest
         name: workload-security-evaluator

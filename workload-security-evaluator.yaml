@@ -15,7 +15,7 @@ spec:
         app: workload-security-evaluator
     spec:
       containers:
-      - image: confusedcrib/workload-security-evaluator:latest
+      - image: confusedcrib/workload-security-evaluator:nightly@sha256:a332386cb8ee0ba0e62dbe17bc654f0a5ebdd78e037cf5f1e08de71e0f0add52
         name: workload-security-evaluator
         env:
         - name: AWS_ACCESS_KEY_ID

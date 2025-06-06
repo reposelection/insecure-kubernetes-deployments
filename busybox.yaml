@@ -22,3 +22,5 @@ spec:
         command:
           - sleep
           - "3600"
+        securityContext:
+          readOnlyRootFilesystem: true

@@ -14,6 +14,8 @@ spec:
       labels:
         app: busybox
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
       - name: busybox
         image: busybox

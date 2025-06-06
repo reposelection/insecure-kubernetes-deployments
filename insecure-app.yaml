@@ -14,6 +14,8 @@ spec:
       labels:
         app: insecure-app
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
       - image: confusedcrib/insecure-app:latest
         name: insecure-app

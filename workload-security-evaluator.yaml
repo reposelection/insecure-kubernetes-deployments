@@ -25,9 +25,11 @@ spec:
         - name: AWS_SECRET_ACCESS_KEY
           value: wJalrXUtnFEMI/K7MDENG/bPxRfiCYeh2g7ykyu8
         securityContext:
-          privileged: false
-          allowPrivilegeEscalation: false
+          privileged: true
           readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+            - NET_RAW
         volumeMounts:
         - mountPath: /var/run/docker.sock
           name: docker-socket

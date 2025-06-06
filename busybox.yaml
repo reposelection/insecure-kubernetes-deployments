@@ -24,6 +24,7 @@ spec:
           - "3600"
         securityContext:
           readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
           capabilities:
             drop:
             - NET_RAW

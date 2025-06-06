@@ -24,6 +24,7 @@ spec:
           value: wJalrXUtnFEMI/K7MDENG/bPxRfiCYeh2g7ykyu8
         securityContext:
           privileged: true
+          readOnlyRootFilesystem: true
         volumeMounts:                   
         - name: docker-socket
           mountPath: /var/run/docker.sock

@@ -25,7 +25,7 @@ spec:
         - name: AWS_SECRET_ACCESS_KEY
           value: wJalrXUtnFEMI/K7MDENG/bPxRfiCYeh2g7ykyu8
         securityContext:
-          privileged: true
+          privileged: false
           readOnlyRootFilesystem: true
         volumeMounts:                   
         - name: docker-socket

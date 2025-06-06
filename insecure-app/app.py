@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template_string, send_from_directory
 import subprocess
+import shlex
 import os
 import re
 
@@ -14,7 +15,7 @@ def index():
             if not re.match(r'^[a-zA-Z0-9_\-/\\]+$', cmd):
                 output = "Invalid command format"
                 return render_template_string(template, output=output)
-            process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.Popen(shlex.split(cmd), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = process.communicate()
             if process.returncode == 0:
                 output = stdout.decode('utf-8')

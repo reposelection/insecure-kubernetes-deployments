@@ -24,3 +24,4 @@ spec:
           - "3600"
         securityContext:
           readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false

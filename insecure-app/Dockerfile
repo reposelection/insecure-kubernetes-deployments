@@ -25,4 +25,8 @@ RUN mkdir /uploads
 # Install Flask
 RUN pip3 install Flask
 
+RUN useradd -U -u 1000 appuser && \
+    chown -R 1000:1000 /app /uploads
+USER 1000
+
 CMD ["python3", "/app/app.py"]
